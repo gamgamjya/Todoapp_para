@@ -1,15 +1,21 @@
 {
-  "name": "todoapp-para",
+  "name": "zentask---자연어-할-일-관리",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "xlsx": "^0.18.5"
+  },
   "devDependencies": {
-    "typescript": "~5.8.3",
-    "vite": "^7.1.2"
+    "@types/node": "^22.14.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
   }
 }

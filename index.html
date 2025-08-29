@@ -1,13 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>ZenTask - 자연어 할 일 관리</title>
+    <!-- 간편하게 Tailwind CDN 유지 -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+  <body class="bg-gray-900 text-white">
+    <div id="root"></div>
+    <div id="portal-root"></div>
+    <!-- Vite가 /index.tsx를 번들로 제공 -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
