@@ -1,29 +1,25 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "experimentalDecorators": true,
-    "useDefineForClassFields": false,
     "module": "ESNext",
-    "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
-    ],
-    "skipLibCheck": true,
-    "types": [
-      "node"
-    ],
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "moduleResolution": "bundler",
-    "isolatedModules": true,
     "moduleDetection": "force",
+
+    "jsx": "react-jsx",                 // ✅ React JSX
     "allowJs": true,
-    "jsx": "react-jsx",
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    },
-    "allowImportingTsExtensions": true,
-    "noEmit": true
-  }
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "useDefineForClassFields": false,
+    "experimentalDecorators": true,
+    "noEmit": true,
+
+    "baseUrl": ".",                     // ✅ 경로 alias 쓸 때 안전
+    "paths": { "@/*": ["./*"] },
+
+    "types": ["node", "vite/client"],   // ✅ Vite의 import.meta.env 등 타입 지원
+    "resolveJsonModule": true,          // ✅ metadata.json 같은 JSON import 시
+    "allowImportingTsExtensions": true
+  },
+  "include": ["src", "vite-env.d.ts"]   // ✅ TSX/TS 파일과 Vite 타입 포함
 }
